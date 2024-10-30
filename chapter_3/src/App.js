@@ -1,24 +1,24 @@
 import React from "react";
 import Products from "./Products";
+import { Button } from 'react-bootstrap';
+import Rating from "./Rating";
 
 // function formatName(user) {
 //   return user.firstName + ' ' + user.lastName;
 // }
 
 function App() {
-  // const user = {
-  //   firstName: "Jada",
-  //   lastName: "Mathele",
-  //   imageUrl:'https://picsum.photos/200/300'
-  // };
+  const isValid = true;
 
   return (
     <div>
-      {/* <h1>Learn React Hooks</h1> */}
       <Products />
-      {/* Hi there, {formatName(user)}!
-      <br />
-      <img src={user.imageUrl}></img> */}
+      <Rating rating='1' />
+      <Rating rating='2' />
+      <Rating rating='3' />
+      <Rating rating='4' />
+      <Rating rating='5' />
+      <Button variant="danger" disabled={!isValid}>Default</Button>
     </div>
   );
 }
